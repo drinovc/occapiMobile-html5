@@ -1,0 +1,357 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "VLineChart",
+        "designer|userClassName": "VLineChart",
+        "itemId": "VLineChart",
+        "layout": "fit"
+    },
+    "designerId": "501e5f0f-f3ee-4637-8045-aabcd399c016",
+    "cn": [
+        {
+            "type": "Ext.TitleBar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "height": 46,
+                "margin": 0,
+                "padding": 0
+            },
+            "designerId": "28501d1f-f7c0-432c-8810-44ef6b7a506c",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "plain",
+                        "height": 46,
+                        "itemId": "btnLineChartBack",
+                        "margin": 0,
+                        "padding": "0 10",
+                        "text": "Back",
+                        "ui": "plain"
+                    },
+                    "designerId": "aae3fcbe-da18-458d-848a-0512a54ceeb7"
+                }
+            ]
+        },
+        {
+            "type": "Ext.chart.CartesianChart",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "animate": false,
+                "colors": [
+                    "[\"#115fa6\", \"#94ae0a\", \"#a61120\", \"#ff8809\", \"#ffd13e\", \"#a66111\", \"#24ad9a\", \"#ff0000\", \"#a66111\"]"
+                ],
+                "innerPadding": [
+                    "{\"top\":5,\"left\":5,\"right\":5,\"bottom\":5}"
+                ],
+                "itemId": null,
+                "store": "StoreCharts"
+            },
+            "designerId": "07cdf4e2-7a15-4887-b70c-d31f560fd70a",
+            "isBuiltIn": true,
+            "iconCls": "icon-line-chart",
+            "autoName": "MyLineChart",
+            "cn": [
+                {
+                    "type": "Ext.chart.axis.Time",
+                    "reference": {
+                        "name": "axes",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "dateFormat": "H:i:s",
+                        "designer|displayName": "x",
+                        "fields": [
+                            "dateTime"
+                        ],
+                        "label": [
+                            "{\"x\":0,\"y\":0,\"textBaseline\":\"middle\",\"textAlign\":\"center\",\"fontSize\":12,\"fontFamily\":\"Helvetica\",\"color\":\"#999999\"}"
+                        ],
+                        "labelInSpan": true,
+                        "step": null,
+                        "style": [
+                            "{\r",
+                            "    stroke: \"none\"\r",
+                            "}"
+                        ]
+                    },
+                    "designerId": "a759ee79-5f45-4cc9-a9dc-6b29ab9c8fd5"
+                },
+                {
+                    "type": "Ext.chart.axis.Numeric",
+                    "reference": {
+                        "name": "axes",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "x",
+                        "fields": [
+                            "x"
+                        ],
+                        "hidden": true,
+                        "increment": null,
+                        "label": [
+                            "{\"x\":0,\"y\":0,\"textBaseline\":\"middle\",\"textAlign\":\"center\",\"fontSize\":12,\"fontFamily\":\"Helvetica\",\"color\":\"#999999\"}"
+                        ],
+                        "labelInSpan": true,
+                        "maxZoom": null,
+                        "style": [
+                            "{\r",
+                            "    stroke: \"none\"\r",
+                            "}"
+                        ]
+                    },
+                    "designerId": "71931eb5-eeaf-4a74-900c-a1a5bcb7efc7",
+                    "cn": [
+                        {
+                            "type": "fixedfunction",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|params": [
+                                    "labelText",
+                                    "layout",
+                                    "lastLabelText"
+                                ],
+                                "fn": "renderer",
+                                "implHandler": [
+                                    "var timeS = Ext.Date.format(new Date(labelText), App.s.timeFormat);\r",
+                                    "return timeS;"
+                                ]
+                            },
+                            "designerId": "03ac8d00-a359-4803-8c46-23bbc932011d"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.chart.axis.Numeric",
+                    "reference": {
+                        "name": "axes",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "y",
+                        "fields": [
+                            "y1",
+                            "y2",
+                            "y3"
+                        ],
+                        "grid": [
+                            "{\r",
+                            "    stroke: \"dddddd\"\r",
+                            "}"
+                        ],
+                        "label": [
+                            "{\"x\":0,\"y\":0,\"textBaseline\":\"middle\",\"textAlign\":\"center\",\"fontSize\":12,\"fontFamily\":\"Helvetica\",\"color\":\"#999999\"}"
+                        ],
+                        "position": "left",
+                        "style": [
+                            "{\r",
+                            "    stroke: \"none\"\r",
+                            "}"
+                        ],
+                        "title": null
+                    },
+                    "designerId": "0cb67da3-389b-478e-a223-b8571a4a3be7"
+                },
+                {
+                    "type": "Ext.chart.series.Line",
+                    "reference": {
+                        "name": "series",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "colors": [
+                            "rgba(0,200,0,0.3)"
+                        ],
+                        "designer|displayName": "y1",
+                        "fill": null,
+                        "highlightCfg": null,
+                        "highlightItem": null,
+                        "label": [
+                            "{\"textBaseline\":\"middle\",\"textAlign\":\"center\",\"font\":\"14px Helvetica\"}"
+                        ],
+                        "labelField": "y1Label",
+                        "marker": [
+                            "{\r",
+                            "    type: \"circle\",\r",
+                            "    radius: 3,\r",
+                            "    lineWidth: 2,\r",
+                            "    fill: \"#ffffff\"\r",
+                            "}"
+                        ],
+                        "markerSubStyle": null,
+                        "step": null,
+                        "style": [
+                            "{\r",
+                            "    smooth: false,\r",
+                            "    stroke: 'rgb(54,68,82)',\r",
+                            "    lineCap: 'miter',\r",
+                            "    lineWidth: 2\r",
+                            "}"
+                        ],
+                        "xField": "dateTime",
+                        "yField": "y1"
+                    },
+                    "designerId": "48faf568-d6bc-4819-8ddb-0f67f3349569"
+                },
+                {
+                    "type": "Ext.chart.series.Line",
+                    "reference": {
+                        "name": "series",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "colors": [
+                            "transparent"
+                        ],
+                        "designer|displayName": "y2",
+                        "labelField": "y2Label",
+                        "marker": [
+                            "{\r",
+                            "    type: \"circle\",\r",
+                            "    radius: 3,\r",
+                            "    lineWidth: 2,\r",
+                            "    fill: \"#ffffff\"\r",
+                            "}"
+                        ],
+                        "step": null,
+                        "style": [
+                            "{\r",
+                            "    stroke: 'rgb(248,153,29)',\r",
+                            "    smooth: false,\r",
+                            "    lineCap: 'miter',\r",
+                            "    lineWidth: 2\r",
+                            "}"
+                        ],
+                        "xField": "dateTime",
+                        "yField": "y2"
+                    },
+                    "designerId": "6c5c4d20-7c62-4ec6-90c8-3d54da07362e"
+                },
+                {
+                    "type": "Ext.chart.series.Line",
+                    "reference": {
+                        "name": "series",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "colors": [
+                            "transparent"
+                        ],
+                        "designer|displayName": "y3",
+                        "hidden": null,
+                        "labelField": "y3Label",
+                        "marker": [
+                            "{\r",
+                            "    type: \"circle\",\r",
+                            "    radius: 3,\r",
+                            "    lineWidth: 2,\r",
+                            "    fill: \"#ffffff\"\r",
+                            "}"
+                        ],
+                        "step": null,
+                        "style": [
+                            "{\r",
+                            "    stroke: 'rgb(52,147,244)',\r",
+                            "    smooth: false,\r",
+                            "    lineCap: 'miter',\r",
+                            "    lineWidth: 2\r",
+                            "}"
+                        ],
+                        "xField": "dateTime",
+                        "yField": "y3"
+                    },
+                    "designerId": "ba3cb964-8323-4149-893c-1289f08eab8f"
+                },
+                {
+                    "type": "Ext.chart.Legend",
+                    "reference": {
+                        "name": "legend",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|displayName": "legend",
+                        "padding": null
+                    },
+                    "designerId": "313bb0d2-a5e9-43b9-b74c-d7c48dce55fd",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "",
+                                "implHandler": [
+                                    "<span class=\"x-legend-item-marker {[values.disabled?'x-legend-inactive':'']}\" style=\"background:{mark};\"></span>{[this.render(values)]}"
+                                ]
+                            },
+                            "designerId": "89d25c0b-449f-4516-b368-1ad422e541f5",
+                            "cn": [
+                                {
+                                    "type": "templatefunction",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|params": [
+                                            "values"
+                                        ],
+                                        "fn": "render",
+                                        "implHandler": [
+                                            "return App.sel.chartLegend[values.name];"
+                                        ]
+                                    },
+                                    "designerId": "0454d125-448f-4ea8-abf1-0a6356fb0aff"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.chart.interactions.PanZoom",
+                    "reference": {
+                        "name": "interactions",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "designerId": "8ecf5b2f-23a6-4b50-a106-74e9e33078ce"
+                }
+            ]
+        }
+    ]
+}

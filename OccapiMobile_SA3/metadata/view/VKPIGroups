@@ -1,0 +1,45 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "VKPIGroups",
+        "designer|userClassName": "VKPIGroups",
+        "emptyText": "No KPI Groups",
+        "itemId": "VKPIGroups",
+        "margin": null,
+        "padding": "1 0 0 0",
+        "store": "StoreKPIGroups"
+    },
+    "designerId": "6a392a41-e58f-4f8b-8cb5-cf7a0511761f",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<div>{kpiGroupCaption}</div>\r",
+                    "<div class=\"disclosure-image\"></div>"
+                ]
+            },
+            "designerId": "eb394624-e9cb-4a30-bd1e-4e2ce6ea51cd"
+        },
+        {
+            "type": "Ext.plugin.PullRefresh",
+            "reference": {
+                "name": "plugins",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "d9f05ad1-a8f0-4710-9263-35f9d3e6b473"
+        }
+    ]
+}

@@ -1,0 +1,147 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ModelKPI",
+        "idProperty": "kpiId"
+    },
+    "designerId": "2a5354a8-da2f-4194-859a-6c1be7a81aed",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "assignedToUser"
+            },
+            "designerId": "e0aa6095-6cc8-4343-a4fc-21e886b09659"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "isActive"
+            },
+            "designerId": "0c463869-4118-4e89-9ba6-ca788c22069d"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "kpiCaption"
+            },
+            "designerId": "75467447-b6cc-4e0c-9ed6-95281085b77c"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "kpiDescription"
+            },
+            "designerId": "d42b3863-e4ae-474c-abc0-815acec182d9"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "kpiGroupName"
+            },
+            "designerId": "c8a0a69b-fcdb-4061-b532-b91208498808"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "kpiId"
+            },
+            "designerId": "ff5a6f38-f4d3-4d42-a9ec-cd24c29e7829"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "kpiName"
+            },
+            "designerId": "5f5470be-4c0c-418e-a302-adf7ca9839d4"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "kpiParentName"
+            },
+            "designerId": "5147519e-ecd8-4f51-971f-325fee0e21ee"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "kpiSettingsSer"
+            },
+            "designerId": "5584293f-1087-4182-809e-b92ad0820d2e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "kpiSubgroupName"
+            },
+            "designerId": "7b19cdb8-474f-490d-a5a7-db1a4a8778e0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "monitorName"
+            },
+            "designerId": "7e13f32d-7806-488e-a231-a40be3107dae"
+        }
+    ]
+}

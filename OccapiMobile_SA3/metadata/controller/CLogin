@@ -1,0 +1,176 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "CLogin"
+    },
+    "designerId": "22577002-2db3-4ed0-b615-d36ae5c80641",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#btnLogin",
+                "designer|targetType": "Ext.Button",
+                "fn": "onBtnLoginTap",
+                "implHandler": [
+                    "this.login();"
+                ],
+                "name": "tap"
+            },
+            "designerId": "e6a8c1b6-79af-4b81-910a-53653e7a026e"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "login",
+                "implHandler": [
+                    "App.user.user = App.VNav.down(\"#tfUser\").getValue();\r",
+                    "App.user.pass = App.VNav.down(\"#tfPass\").getValue();\r",
+                    "\r",
+                    "if(App.user.user.trim().length === 0) {\r",
+                    "    Ext.Msg.alert(null, \"Email field should not be empty\", function() {\r",
+                    "        App.VNav.down(\"#tfUser\").focus();\r",
+                    "    }, this);\r",
+                    "    return;\r",
+                    "}\r",
+                    "\r",
+                    "if(App.user.pass.trim().length === 0) {\r",
+                    "    Ext.Msg.alert(null, \"Password field should not be empty\", function() {\r",
+                    "        App.VNav.down(\"#tfPass\").focus();\r",
+                    "    }, this);\r",
+                    "    return;\r",
+                    "}\r",
+                    "\r",
+                    "App.VLogin.down(\"container\").hide();\r",
+                    "App.mask(\"Signing in...\");\r",
+                    "\r",
+                    "Ext.Ajax.request({\r",
+                    "    method: \"GET\",\r",
+                    "    params: {\r",
+                    "        action: \"login\",\r",
+                    "        user: App.user.user,\r",
+                    "        pass: App.user.pass\r",
+                    "    },\r",
+                    "    url: App.s.allowCrossOrigin ? \"login/{user}/{pass}\" : App.c.apiBaseURL,\r",
+                    "    scope: this,\r",
+                    "    useDefaultXhrHeader: false,\r",
+                    "    success: function(response, opts) {\r",
+                    "        var obj = Ext.decode(response.responseText);\r",
+                    "\r",
+                    "        if (obj.status){\r",
+                    "            if(settings.get(settings.names.rememberMe)) {\r",
+                    "                setCookie(\"user\", App.user.user);\r",
+                    "                if(settings.get(settings.names.autoLogin)) {\r",
+                    "                    setCookie(\"pass\", App.user.pass);\r",
+                    "                }\r",
+                    "            }\r",
+                    "            else {\r",
+                    "                Ext.Msg.alert(null, \"Not remembering\");\r",
+                    "            }\r",
+                    "            App.user.token = obj.token;\r",
+                    "\r",
+                    "            App.storeKPIGroups.load({\r",
+                    "                params: {\r",
+                    "                    token: App.user.token\r",
+                    "                },\r",
+                    "                callback: function(records, operation, success) {\r",
+                    "                    if(success) {\r",
+                    "                        App.VNav.setShowAnimation({\r",
+                    "                            type: \"slide\",\r",
+                    "                            direction: \"right\"\r",
+                    "                        });\r",
+                    "                        /*\r",
+                    "                        App.VKPIGroups = App.VNav.push({\r",
+                    "                            xtype: \"VKPIGroups\",\r",
+                    "                            title: \"KPI Groups\"\r",
+                    "                        });\r",
+                    "                        */\r",
+                    "                        App.VMain = App.VNav.push({\r",
+                    "                            xtype: \"VMain\",\r",
+                    "                            title: \"OccapiMobile\"\r",
+                    "                        });\r",
+                    "                        App.VMenu = App.VMain.down(\"sheet\");\r",
+                    "                    }\r",
+                    "                    App.unmask();\r",
+                    "                }\r",
+                    "            });\r",
+                    "        }\r",
+                    "        else {\r",
+                    "            Ext.Msg.alert(null, obj.message);\r",
+                    "            App.unmask();\r",
+                    "            App.VLogin.down(\"container\").show();\r",
+                    "        }\r",
+                    "    },\r",
+                    "    failure: function(response, opts) {\r",
+                    "        Ext.Msg.alert(null, \"Wrong email or password\");\r",
+                    "        App.VLogin.down(\"container\").show();\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "94114603-1509-43da-b121-e8c455d2ddb5"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "logout",
+                "implHandler": [
+                    "if(!settings.get(settings.names.rememberMe)) {\r",
+                    "    App.VLogin.down(\"#tfUser\").setValue(\"\");\r",
+                    "}\r",
+                    "App.VLogin.down(\"#tfPass\").setValue(\"\");\r",
+                    "\r",
+                    "App.VLogin.down(\"container\").show();\r",
+                    "\r",
+                    "App.VNav.pop(3);\r",
+                    "\r",
+                    "App.CAlerts.stop();\r",
+                    "App.CCharts.stop();\r",
+                    "\r",
+                    "App.VNav.getNavigationBar().hide();\r",
+                    "App.user = {\r",
+                    "    token: null\r",
+                    "};"
+                ]
+            },
+            "designerId": "af404231-993e-409a-8948-c5edfab1252d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "passwordfield#tfPass",
+                "designer|targetType": "Ext.field.Password",
+                "fn": "onTfPassAction",
+                "implHandler": [
+                    "this.login();"
+                ],
+                "name": "action"
+            },
+            "designerId": "d2ce9643-f52a-46ad-8fbe-221f108083ed"
+        }
+    ]
+}

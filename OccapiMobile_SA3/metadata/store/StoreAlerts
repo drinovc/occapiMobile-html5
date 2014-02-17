@@ -1,0 +1,61 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "StoreAlerts",
+        "model": "ModelAlert",
+        "storeId": "StoreAlerts"
+    },
+    "designerId": "acb2ce7d-aa03-4adc-90bc-2bbdd77961c1",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "extraParams": [
+                    "{\r",
+                    "    action: \"alerts\"\r",
+                    "}"
+                ],
+                "url": "alerts/all_alerts/token/{token}",
+                "useDefaultXhrHeader": false
+            },
+            "designerId": "ce1dfd53-3f95-4f0d-b7e0-45337eaa67d2",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": "alerts"
+                    },
+                    "designerId": "bb030fac-48b9-4500-a871-741832e8399a"
+                }
+            ]
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "direction": "DESC",
+                "property": "timestamp"
+            },
+            "designerId": "6ab79494-bd4d-440f-a986-bc7bb445df22"
+        }
+    ]
+}

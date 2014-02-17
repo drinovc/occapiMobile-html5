@@ -1,0 +1,143 @@
+{
+    "type": "Ext.Container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "VMain",
+        "designer|userClassName": "VMain",
+        "itemId": "VMain",
+        "layout": "card"
+    },
+    "designerId": "6721703e-1b70-4a6f-ae97-869e81569fb3",
+    "cn": [
+        {
+            "type": "Ext.TitleBar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "defaults": null,
+                "docked": "top",
+                "height": 46,
+                "margin": 0,
+                "padding": 0,
+                "title": "KPI Groups"
+            },
+            "designerId": "1cf9e52e-63b5-4464-b84c-ca0068434953",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "cls": [
+                            "menu-btn"
+                        ],
+                        "designer|uiInterfaceName": "plain",
+                        "height": 46,
+                        "itemId": "btnMenu",
+                        "margin": 0,
+                        "padding": "0 10",
+                        "text": "Menu<div class=\"a\"></div><div class=\"b\"></div><div class=\"c\"></div>",
+                        "ui": "plain"
+                    },
+                    "designerId": "d7015d24-5f12-4c3a-9799-6658d6907f6d"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Sheet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "menu"
+                ],
+                "enter": "left",
+                "exit": "left",
+                "height": "100%",
+                "hidden": true,
+                "hideOnMaskTap": true,
+                "itemId": "menu",
+                "layout": "fit",
+                "left": 0,
+                "margin": null,
+                "maxWidth": "100%",
+                "padding": null,
+                "width": 210
+            },
+            "designerId": "54a8415a-2423-4af6-8457-db4b274c32a5",
+            "cn": [
+                {
+                    "type": "Ext.dataview.List",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "disableSelection": true,
+                        "itemId": "menuList",
+                        "margin": "-1 0 0 0",
+                        "onItemDisclosure": null,
+                        "scrollable": false,
+                        "store": "StoreMenu"
+                    },
+                    "configAlternates": {
+                        "scrollable": "boolean"
+                    },
+                    "designerId": "5a2a0edb-8339-4732-94cf-f5c0a5012745",
+                    "cn": [
+                        {
+                            "type": "Ext.XTemplate",
+                            "reference": {
+                                "name": "itemTpl",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|displayName": "itemTpl",
+                                "implHandler": [
+                                    "<div class=\"menu-icon\" style=\"color:{color};\">{icon}</div>\r",
+                                    "<div class=\"menu-text\">{caption}</div>"
+                                ]
+                            },
+                            "designerId": "d8a5dbc4-ea20-4b6c-9ac1-1cc0c9ef55db"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "546d9348-178c-4b24-98b2-605c55176a26",
+            "masterInstanceId": "6a392a41-e58f-4f8b-8cb5-cf7a0511761f"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "3121ca9b-b5c6-49b5-aff4-94cbd8f815a9",
+            "masterInstanceId": "fb1316d3-ba1b-4e1e-904c-031b812bb7fa"
+        }
+    ]
+}

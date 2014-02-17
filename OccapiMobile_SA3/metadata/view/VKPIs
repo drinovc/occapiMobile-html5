@@ -1,0 +1,80 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "VKPIs",
+        "designer|userClassName": "VKPIs",
+        "emptyText": "No KPIs",
+        "itemId": "VKPIs",
+        "onItemDisclosure": false,
+        "store": "StoreKPIs"
+    },
+    "designerId": "a1c6c335-b4de-4adf-b928-0f2f6c4fb9db",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<div class=\"icon {monitorName}\"></div>\r",
+                    "<div class=\"with-icon\">{kpiCaption}</div>\r",
+                    "<div class=\"disclosure-image\"></div>"
+                ]
+            },
+            "designerId": "ddbcf956-144f-4941-b43c-9c341b3f99a6"
+        },
+        {
+            "type": "Ext.TitleBar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "height": 46,
+                "margin": 0,
+                "padding": 0
+            },
+            "designerId": "3454df26-6cc9-4b75-87e1-f9f11ab52b49",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "plain",
+                        "height": 46,
+                        "itemId": "btnKpisBack",
+                        "margin": 0,
+                        "padding": "0 10",
+                        "text": "Back",
+                        "ui": "plain"
+                    },
+                    "designerId": "692a3b7a-7884-47be-9cc4-fc3566c565fc"
+                }
+            ]
+        },
+        {
+            "type": "Ext.plugin.PullRefresh",
+            "reference": {
+                "name": "plugins",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "dbafd218-1eff-426c-b87a-c2032ff452e1"
+        }
+    ]
+}

@@ -1,0 +1,45 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "StoreKPIGroups",
+        "model": "ModelKPIGroup",
+        "storeId": "StoreKPIGroups"
+    },
+    "designerId": "79af67f2-2c2f-4045-bc57-06de098f9325",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "extraParams": [
+                    "{\r",
+                    "    action: \"kpigroup\"\r",
+                    "}"
+                ],
+                "url": "kpigroup/user/{token}",
+                "useDefaultXhrHeader": false
+            },
+            "designerId": "643a166e-ae28-4bf6-8706-a76f3954c7ee",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "ff765404-c020-41cb-943a-87289b2d05fd"
+                }
+            ]
+        }
+    ]
+}

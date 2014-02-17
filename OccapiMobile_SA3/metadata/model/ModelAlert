@@ -1,0 +1,241 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ModelAlert",
+        "idProperty": "timestamp"
+    },
+    "designerId": "2a79ef70-a9d7-457d-bc8d-f66d6361a5f1",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "timestamp",
+                "type": "int"
+            },
+            "designerId": "c46b3c35-99d7-451b-9af7-ae42444606f4"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "what"
+            },
+            "designerId": "9891d40d-eaa3-4685-87cd-79f75115d5fc"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "reason"
+            },
+            "designerId": "f1e15841-ed9c-45f3-b7c3-81edabeee232"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "level"
+            },
+            "designerId": "8b9a0d76-1c1b-45e0-ad2b-b861b6616058"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "kpiName"
+            },
+            "designerId": "5e2fa97e-8798-4096-9a88-ed02104bca12"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "longitude"
+            },
+            "designerId": "8fe1995d-f509-4e30-8504-16d453cc3aac"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "latitude"
+            },
+            "designerId": "737dc671-7e1e-4829-8a0c-f93ab0e6f1fa"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "fingerprint"
+            },
+            "designerId": "e7012623-94d4-44a4-88c2-5d4aee2209f6"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "markerType"
+            },
+            "designerId": "f6857f82-5831-4a19-9159-08a803abb028"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "radius"
+            },
+            "designerId": "d4e27eff-54a1-4929-bfae-1c75aa00b8d4"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "color"
+            },
+            "designerId": "8b78eb11-4611-4e30-8c53-be06443aa771"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "kpiCaption"
+            },
+            "designerId": "c46051f0-2994-47e5-a170-1d09b4b9ddb7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "levelCaption"
+            },
+            "designerId": "19a03e41-51c5-4eb0-b4ac-f81da129aad1"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "mapping": "timestamp",
+                "name": "dateTime",
+                "type": "date"
+            },
+            "designerId": "fa17fe53-bc84-4607-b2be-c35997b7f941",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "v",
+                            "rec"
+                        ],
+                        "fn": "convert",
+                        "implHandler": [
+                            "return new Date(v);"
+                        ]
+                    },
+                    "designerId": "cb368d0a-446e-48ba-8736-8dabdbc1f49e"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "mapping": "timestamp",
+                "name": "dateTimeS"
+            },
+            "designerId": "1868f292-8066-45f4-af4d-1255a4bbab86",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "v",
+                            "rec"
+                        ],
+                        "fn": "convert",
+                        "implHandler": [
+                            "return Ext.Date.format(new Date(v), App.s.dateTimeFormat);"
+                        ]
+                    },
+                    "designerId": "84c858c5-3441-48e7-8059-5bad7219c629"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,61 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "VAbout",
+        "designer|userClassName": "VAbout",
+        "itemId": "VAbout"
+    },
+    "designerId": "fb1316d3-ba1b-4e1e-904c-031b812bb7fa",
+    "cn": [
+        {
+            "type": "Ext.Img",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 38,
+                "margin": "100 0 0 0",
+                "mode": null,
+                "src": "occapi_logo_login.png"
+            },
+            "designerId": "f4accdbe-df80-422d-8636-092a632038f8"
+        },
+        {
+            "type": "Ext.Label",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "cls": [
+                    "centered"
+                ],
+                "html": "mobile",
+                "margin": "0 0 20 0",
+                "style": "text-align: center; font-weight:bold;"
+            },
+            "designerId": "7b1a04b0-de6d-480c-a7ce-06a2d5e132ee"
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "<b>Rok Drinovec, 63080089</b><br /><br />Faculty of Computer and<br />Information Science, Ljubljana<br />2014",
+                "style": "text-align: center;"
+            },
+            "designerId": "7c5700b0-bc85-4a91-a937-f2cc01bcf1d2"
+        }
+    ]
+}

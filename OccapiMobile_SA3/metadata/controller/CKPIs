@@ -1,0 +1,66 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "CKPIs"
+    },
+    "designerId": "8a7928fb-381c-4fce-b06b-40efb57d484c",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#VKPIs",
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onVKPIsItemTap",
+                "implHandler": [
+                    "App.mask(\"Loading KPI data...\");\r",
+                    "App.recKPI = record;\r",
+                    "App.sel.kpiName = record.get(\"kpiName\");\r",
+                    "App.sel.monitor = record.get(\"monitorName\");\r",
+                    "\r",
+                    "if(App.sel.monitor == \"alert_on_list\") {\r",
+                    "    App.CAlerts.start();\r",
+                    "}\r",
+                    "else if(App.sel.monitor == \"line_chart\") {\r",
+                    "    App.storeCharts.removeAll();\r",
+                    "\r",
+                    "    App.CCharts.start();\r",
+                    "}\r",
+                    "else {\r",
+                    "    Ext.Msg.alert(\"Error\", \"Unsupported KPI monitor.\");\r",
+                    "}"
+                ],
+                "name": "itemtap"
+            },
+            "designerId": "bdaf0ebd-82ee-4061-a3d8-abd4135e2f20"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#btnKpisBack",
+                "designer|targetType": "Ext.Button",
+                "fn": "onBtnKpisBackTap",
+                "implHandler": [
+                    "App.VNav.pop();\r",
+                    "App.sel.groupName = null;"
+                ],
+                "name": "tap"
+            },
+            "designerId": "a276e59d-6e94-40ea-9366-4e57e339ce4c"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "CAlertDetails"
+    },
+    "designerId": "c4f0e216-df3a-4454-bc30-475a4e8477de",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#btnAlertDetailsBack",
+                "designer|targetType": "Ext.Button",
+                "fn": "onBtnAlertDetailsBackTap",
+                "implHandler": [
+                    "App.VNav.pop();"
+                ],
+                "name": "tap"
+            },
+            "designerId": "7ac8b84b-e226-4ec0-9c7a-e036d9ea9f82"
+        }
+    ]
+}

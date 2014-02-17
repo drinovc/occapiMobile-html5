@@ -1,0 +1,55 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "CNav"
+    },
+    "designerId": "ce6938a9-08f4-4f7d-bc44-e2178a71876d",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "navigationview#VNav",
+                "designer|targetType": "Ext.navigation.View",
+                "fn": "onVNavInitialize",
+                "implHandler": [
+                    "App.VNav = component;\r",
+                    "App.VMenu = component.down(\"sheet\");\r",
+                    "App.VLogin = component.down(\"#VLogin\");\r",
+                    "\r",
+                    "settings.view = Ext.Viewport.add({xtype: \"VSettings\", hidden: true});\r",
+                    "\r",
+                    "Ext.Viewport.element.on(\"swipe\", function(e,t) {\r",
+                    "    if(e.direction == \"left\") {\r",
+                    "        App.VMenu.hide();\r",
+                    "    }\r",
+                    "}, this);\r",
+                    "\r",
+                    "if(settings.get(settings.names.rememberMe)) {\r",
+                    "    var user = getCookie(\"user\");\r",
+                    "\r",
+                    "    App.VLogin.down(\"#tfUser\").setValue(user);\r",
+                    "\r",
+                    "    if(settings.get(settings.names.autoLogin)) {\r",
+                    "        var pass = getCookie(\"pass\");\r",
+                    "\r",
+                    "        App.VLogin.down(\"#tfPass\").setValue(pass);\r",
+                    "        App.CLogin.login();\r",
+                    "    }\r",
+                    "}"
+                ],
+                "name": "initialize"
+            },
+            "designerId": "b877509a-9e47-4779-a8f5-33e73269081a"
+        }
+    ]
+}

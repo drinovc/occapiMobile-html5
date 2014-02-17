@@ -1,0 +1,95 @@
+{
+    "name": "OccapiMobile",
+    "settings": {
+        "cmd": {
+            "license": "commercial",
+            "cmdVersion": "4.0.1.45",
+            "frameworkVersion": "2.2.1.480"
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "iPhone 5",
+                "builtIn": true,
+                "height": 568,
+                "width": 320
+            },
+            "viewportOrientation": "portrait"
+        },
+        "urlPrefix": "",
+        "exportPath": "C:/TEST",
+        "buildShouldOverwriteIndex": false,
+        "generateArchitectVersion": false,
+        "spacesToIndent": 4,
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "displayfield-ExtBox1-1280-inputEl": "Not Installed",
+        "displayfield-ExtBox1-1345-inputEl": "Not Installed",
+        "displayfield-ExtBox1-1273-inputEl": "Not Installed",
+        "sdkPath": "",
+        "lastBuildSelection": {
+            "value": "androidBuild",
+            "display": "Build Android app"
+        },
+        "displayfield-ExtBox1-1330-inputEl": "Not Installed",
+        "displayfield-ExtBox1-1288-inputEl": "Not Installed"
+    },
+    "xdsVersion": "3.0.2",
+    "xdsBuild": 1375,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000004,
+    "framework": "touch22",
+    "viewOrderMap": {
+        "view": [
+            "eebfac09-cab7-4a9e-9daf-9fa706cab21b",
+            "81e76f3b-1cb1-4311-b4ce-d1ee33019f8c",
+            "6721703e-1b70-4a6f-ae97-869e81569fb3",
+            "6a392a41-e58f-4f8b-8cb5-cf7a0511761f",
+            "a1c6c335-b4de-4adf-b928-0f2f6c4fb9db",
+            "31e92f2a-02ae-4b1d-bf7e-6426d83bf4cc",
+            "501e5f0f-f3ee-4637-8045-aabcd399c016",
+            "8dcda335-1c00-475a-81d0-cd58818f4baa",
+            "04ba2c0a-6dfc-434b-9974-c0b23fc296f4",
+            "fb1316d3-ba1b-4e1e-904c-031b812bb7fa",
+            "592fb7eb-9ceb-46e0-b590-cab65fe586b5"
+        ],
+        "store": [
+            "79af67f2-2c2f-4045-bc57-06de098f9325",
+            "830a3d3f-7c28-4737-bce5-500794774242",
+            "c1a9dfb6-3d48-42d7-8da4-10f859d3a6e6",
+            "acb2ce7d-aa03-4adc-90bc-2bbdd77961c1",
+            "73a1da01-4049-4cdd-82f0-e82c232f2629"
+        ],
+        "controller": [
+            "ce6938a9-08f4-4f7d-bc44-e2178a71876d",
+            "22577002-2db3-4ed0-b615-d36ae5c80641",
+            "c8490be2-f23d-4206-a959-2a986daca656",
+            "db748520-8bd0-4797-bc39-4ff56d0f7b52",
+            "8a7928fb-381c-4fce-b06b-40efb57d484c",
+            "bc43a22d-d317-47e0-ae5f-827c898c6c3f",
+            "284b4ef0-5722-4779-89fd-62f45ddd2ecf",
+            "1c0be30b-1c66-4cb1-9673-c596ef02246d",
+            "c4f0e216-df3a-4454-bc30-475a4e8477de"
+        ],
+        "model": [
+            "0c030c91-8145-454c-b721-4706133844a4",
+            "2a5354a8-da2f-4194-859a-6c1be7a81aed",
+            "1486367c-1e22-4d5d-b541-6ec83478824e",
+            "2a79ef70-a9d7-457d-bc8d-f66d6361a5f1",
+            "b30cf82b-a31e-4dd8-b2c5-40b76dd27ff8"
+        ],
+        "resource": [
+            "94e6483e-fad3-47a3-aa45-36e0c19228a7",
+            "40a1a3fa-54f8-41c0-8af8-07d310c21b59",
+            "6a2ee9e3-2372-4a91-8d10-ac98ec2d661b",
+            "71a0c11d-1c19-4d26-87b0-5fde2b697f06",
+            "8b25f2f1-6355-4787-ab3d-9058768adbe4",
+            "0411aa3d-3e48-4369-a220-b8aae5b6dc16",
+            "974cb6fd-8722-403d-a758-7f313941c138",
+            "1b74d8cb-9aa4-4dde-9e77-06120299ed1a"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

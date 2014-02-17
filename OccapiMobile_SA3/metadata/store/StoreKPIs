@@ -1,0 +1,45 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "StoreKPIs",
+        "model": "ModelKPI",
+        "storeId": "StoreKPIs"
+    },
+    "designerId": "830a3d3f-7c28-4737-bce5-500794774242",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "extraParams": [
+                    "{\r",
+                    "    action: \"kpi\"\r",
+                    "}"
+                ],
+                "url": "kpi/group/{groupName}/user/{token}",
+                "useDefaultXhrHeader": false
+            },
+            "designerId": "73ece829-44f6-431f-83c6-5ca551731a2d",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "3674941c-8f59-4f8a-8f9c-06048397a6e6"
+                }
+            ]
+        }
+    ]
+}

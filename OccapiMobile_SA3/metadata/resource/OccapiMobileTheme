@@ -1,0 +1,50 @@
+{
+    "type": "defaultthemeresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "OccapiMobileTheme"
+    },
+    "designerId": "974cb6fd-8722-403d-a758-7f313941c138",
+    "storage": {
+        "needsCompile": false,
+        "simple": {},
+        "nameIndex": 1,
+        "varData": {
+            "Ext.Class": {
+                "globalVars": [
+                    {
+                        "name": "active-color",
+                        "enabled": true,
+                        "value": "rgba(255,102,0,1)"
+                    },
+                    {
+                        "name": "base-color",
+                        "enabled": true,
+                        "value": "rgba(255,255,255,1)"
+                    }
+                ]
+            }
+        }
+    },
+    "cn": [
+        {
+            "type": "themescss",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "Scss Resource",
+                "implHandler": [
+                    ""
+                ]
+            },
+            "designerId": "a4b57a0c-228e-4c3b-ab40-f5d0b2b64b58"
+        }
+    ]
+}

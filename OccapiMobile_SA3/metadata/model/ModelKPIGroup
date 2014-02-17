@@ -1,0 +1,39 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ModelKPIGroup",
+        "idProperty": "kpiGroupName"
+    },
+    "designerId": "0c030c91-8145-454c-b721-4706133844a4",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "kpiGroupCaption"
+            },
+            "designerId": "edd1ff3c-45af-4a12-85d0-ad1430b24643"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "kpiGroupName"
+            },
+            "designerId": "24c0f2dc-8ec0-4235-9bd6-d8195fcefffc"
+        }
+    ]
+}

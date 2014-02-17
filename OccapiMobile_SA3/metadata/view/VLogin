@@ -1,0 +1,154 @@
+{
+    "type": "Ext.form.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "centered": false,
+        "designer|userAlias": "VLogin",
+        "designer|userClassName": "VLogin",
+        "itemId": "VLogin",
+        "layout": null,
+        "maxWidth": null,
+        "scrollable": [
+            "null"
+        ]
+    },
+    "configAlternates": {
+        "scrollable": "object"
+    },
+    "designerId": "81e76f3b-1cb1-4311-b4ce-d1ee33019f8c",
+    "cn": [
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "centered": null,
+                "cls": [
+                    "centered"
+                ],
+                "height": null,
+                "maxWidth": 500
+            },
+            "designerId": "a368eeff-7c22-4d3d-96c5-527834da10df",
+            "cn": [
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "centered": false,
+                        "cls": [
+                            "centered"
+                        ],
+                        "html": "<img src=\"occapi_logo_login.png\" />",
+                        "margin": null,
+                        "padding": "100 0 0 0",
+                        "width": 100
+                    },
+                    "designerId": "0cfe7bd3-3d8b-4dc7-a7e7-19fc8b6a2dab"
+                },
+                {
+                    "type": "Ext.form.FieldSet",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "centered": null,
+                        "defaults": [
+                            "{\r",
+                            "    labelWidth: 60\r",
+                            "}"
+                        ],
+                        "height": null,
+                        "margin": "-10 10 10 10",
+                        "title": ""
+                    },
+                    "designerId": "8cd99df6-71ad-4c11-bcd1-18187d0a13f7",
+                    "cn": [
+                        {
+                            "type": "Ext.field.Email",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "clearIcon": false,
+                                "itemId": "tfUser",
+                                "label": "",
+                                "placeHolder": "email@example.com",
+                                "value": null
+                            },
+                            "designerId": "b0f14341-0d7f-4026-8d6a-90fb17defe83"
+                        },
+                        {
+                            "type": "Ext.field.Password",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "clearIcon": false,
+                                "itemId": "tfPass",
+                                "label": "",
+                                "placeHolder": "password",
+                                "value": null
+                            },
+                            "designerId": "aec15631-b8b5-4587-847c-f824cb5ab30e"
+                        }
+                    ]
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "container|pack": "center",
+                        "layout": "hbox"
+                    },
+                    "designerId": "3ca468bb-cda2-433c-84bf-1cd6a7d0988f",
+                    "cn": [
+                        {
+                            "type": "Ext.Button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "centered": false,
+                                "designer|uiInterfaceName": "action",
+                                "height": 40,
+                                "iconCls": null,
+                                "itemId": "btnLogin",
+                                "margin": 10,
+                                "maxWidth": null,
+                                "minWidth": null,
+                                "text": "Sign in",
+                                "ui": "action",
+                                "width": 150
+                            },
+                            "designerId": "a5f12199-3b2a-4d83-825a-b0f25a9e836b"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

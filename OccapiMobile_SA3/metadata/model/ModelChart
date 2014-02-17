@@ -1,0 +1,168 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "ModelChart"
+    },
+    "designerId": "1486367c-1e22-4d5d-b541-6ec83478824e",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "x",
+                "type": "int"
+            },
+            "designerId": "e2e91154-1fb7-4172-9b9f-797e4aaab12f"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "y1"
+            },
+            "designerId": "3e3ab31c-7acd-4310-9ddf-f26df272b524"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "y2"
+            },
+            "designerId": "ef2bb4d5-a149-4a7d-9d18-15c69347c60b"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "y3"
+            },
+            "designerId": "00589380-d228-4576-acd3-253fdcc82ae0"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "y1Label"
+            },
+            "designerId": "84a76904-a32e-45ea-bc19-6f4e87e03706"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "y2Label"
+            },
+            "designerId": "f06b02f7-6d7c-4b06-87f7-080a22bdfadf"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "y3Label"
+            },
+            "designerId": "54dab24f-6eca-4a9c-94d9-5ae09f09e773"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "mapping": null,
+                "name": "dateTime",
+                "type": "date"
+            },
+            "designerId": "fbb39f2b-0bd1-4f72-aa4f-d48f92d6ef87",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "v",
+                            "rec"
+                        ],
+                        "fn": "convert",
+                        "implHandler": [
+                            "return new Date(rec.get(\"x\"));"
+                        ]
+                    },
+                    "designerId": "70390740-ef8b-47e6-a4dc-24d7a92c0d52"
+                }
+            ]
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "timeS",
+                "type": "string"
+            },
+            "designerId": "122d0473-9e56-498f-a646-1fa2b1d5d158",
+            "cn": [
+                {
+                    "type": "fixedfunction",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|params": [
+                            "v",
+                            "rec"
+                        ],
+                        "fn": "convert",
+                        "implHandler": [
+                            "return Ext.Date.format(new Date(rec.get(\"x\")), App.s.timeFormat);"
+                        ]
+                    },
+                    "designerId": "8d260b65-5425-4b02-b9b3-ed555af12092"
+                }
+            ]
+        }
+    ]
+}

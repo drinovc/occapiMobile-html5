@@ -1,0 +1,58 @@
+{
+    "type": "Ext.navigation.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "container|animation": "slide",
+        "container|animation.duration": null,
+        "defaultBackButtonText": null,
+        "designer|initialView": true,
+        "designer|userAlias": "VNav",
+        "designer|userClassName": "VNav",
+        "hideAnimation": [
+            "{\r",
+            "    type: \"slideOut\",\r",
+            "    direction: \"left\"\r",
+            "}"
+        ],
+        "itemId": "VNav"
+    },
+    "configAlternates": {
+        "hideAnimation": "object",
+        "showAnimation": "object"
+    },
+    "designerId": "eebfac09-cab7-4a9e-9daf-9fa706cab21b",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Occapi Mobile"
+            },
+            "designerId": "75f337ad-ece9-40da-8f89-98f2cef2d901",
+            "masterInstanceId": "81e76f3b-1cb1-4311-b4ce-d1ee33019f8c"
+        },
+        {
+            "type": "Ext.navigation.Bar",
+            "reference": {
+                "name": "navigationBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": null,
+                "container|pack": "end",
+                "docked": "top",
+                "hidden": true
+            },
+            "designerId": "fe468479-afef-4755-9912-211df38f0901"
+        }
+    ]
+}

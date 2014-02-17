@@ -1,0 +1,85 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "VAlerts",
+        "designer|userClassName": "VAlerts",
+        "disableSelection": null,
+        "emptyText": null,
+        "infinite": true,
+        "itemId": "VAlerts",
+        "scrollToTopOnRefresh": false,
+        "store": "StoreAlerts",
+        "variableHeights": true
+    },
+    "designerId": "31e92f2a-02ae-4b1d-bf7e-6426d83bf4cc",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<div class=\"smaller-text\">\r",
+                    "    <div class=\"title level-{levelCaption}\">{reason}</div>\r",
+                    "    <div>{dateTimeS}</div>\r",
+                    "</div>\r",
+                    "<div class=\"disclosure-image\"></div>"
+                ]
+            },
+            "designerId": "213a2a2b-dca9-4338-8946-e57e6791c55c"
+        },
+        {
+            "type": "Ext.TitleBar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "height": 46,
+                "margin": 0,
+                "padding": 0
+            },
+            "designerId": "c72cdc6b-6a34-4345-8071-656590046063",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "plain",
+                        "height": 46,
+                        "itemId": "btnAlertsBack",
+                        "margin": 0,
+                        "padding": "0 10",
+                        "text": "Back",
+                        "ui": "plain"
+                    },
+                    "designerId": "6f43e389-7c34-4578-97a7-2711fe0f1c1c"
+                }
+            ]
+        },
+        {
+            "type": "Ext.plugin.PullRefresh",
+            "reference": {
+                "name": "plugins",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "af6509f3-fee8-4a73-b97f-aa576b348126"
+        }
+    ]
+}

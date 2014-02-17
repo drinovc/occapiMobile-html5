@@ -1,0 +1,57 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "StoreCharts",
+        "model": "ModelChart",
+        "storeId": "StoreCharts"
+    },
+    "designerId": "c1a9dfb6-3d48-42d7-8da4-10f859d3a6e6",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Rest",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "extraParams": [
+                    "{\r",
+                    "    action: \"chart\"\r",
+                    "}"
+                ],
+                "url": "chart/kpi/{kpi}/monitor/{monitor}/token/{token}",
+                "useDefaultXhrHeader": false
+            },
+            "designerId": "bd90b392-312e-49cb-b5ff-5d4db3b89afc",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "1dc7db3c-e666-4bcf-b562-7e90d38b7d53"
+                }
+            ]
+        },
+        {
+            "type": "Ext.util.Sorter",
+            "reference": {
+                "name": "sorters",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "property": "x"
+            },
+            "designerId": "85c18113-244a-4abf-98df-3651165ede08"
+        }
+    ]
+}

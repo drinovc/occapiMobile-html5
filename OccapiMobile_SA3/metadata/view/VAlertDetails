@@ -1,0 +1,101 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "VAlertDetails",
+        "designer|userClassName": "VAlertDetails",
+        "itemId": "VAlertDetails",
+        "layout": "fit"
+    },
+    "designerId": "04ba2c0a-6dfc-434b-9974-c0b23fc296f4",
+    "cn": [
+        {
+            "type": "Ext.Map",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": null,
+                "itemId": "mymap",
+                "mapOptions": [
+                    "{\r",
+                    "    center : new google.maps.LatLng(46.151241, 14.995463),\r",
+                    "    zoom: 7\r",
+                    "}"
+                ]
+            },
+            "designerId": "046a8df1-b904-4286-a2b2-e94ed309cad0",
+            "cn": [
+                {
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "onMymapMaprender",
+                        "implHandler": [
+                            "map.setMapCenter({ latitude: 46.151241, longitude: 14.995463 });\r",
+                            "\r",
+                            "/*\r",
+                            "setTimeout(function() {\r",
+                            "    map.panTo(map._pos);\r",
+                            "}, 1000);\r",
+                            "*/\r",
+                            "\r",
+                            "var marker = new google.maps.Marker({\r",
+                            "    position: map._pos,\r",
+                            "    title: map._markerTitle,\r",
+                            "    map: gmap\r",
+                            "});"
+                        ],
+                        "name": "maprender"
+                    },
+                    "designerId": "a4653b02-271d-4a6a-8f52-af57289ea909"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "height": 46,
+                "margin": 0,
+                "padding": 0
+            },
+            "designerId": "41e0d5b1-e418-46d7-8fc4-9315b89a4aee",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "plain",
+                        "height": 46,
+                        "itemId": "btnAlertDetailsBack",
+                        "margin": 0,
+                        "padding": "0 10",
+                        "text": "Back",
+                        "ui": "plain"
+                    },
+                    "designerId": "8cb35290-2fdd-418f-bfc8-8eb718e716db"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,62 @@
+{
+    "type": "jsonstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "data": [
+            "[{\r",
+            "    caption: \"KPI Groups\",\r",
+            "    itemId: \"VKPIGroups\",\r",
+            "    icon: \"l\",\r",
+            "    color: \"rgb(206, 113, 27)\"\r",
+            "}, {\r",
+            "    caption: \"About\",\r",
+            "    itemId: \"VAbout\",\r",
+            "    icon: \"i\",\r",
+            "    color: \"rgb(65, 163, 63)\"\r",
+            "}, {\r",
+            "    caption: \"Settings\",\r",
+            "    itemId: \"VSettings\",\r",
+            "    icon: \"x\",\r",
+            "    color: \"rgb(169, 169, 169)\"\r",
+            "}, {\r",
+            "    caption: \"Logout\",\r",
+            "    itemId: \"VLogin\",\r",
+            "    icon: \"Q\",\r",
+            "    color: \"rgb(218, 87, 42)\"\r",
+            "}]"
+        ],
+        "designer|userClassName": "StoreMenu",
+        "model": "ModelMenu",
+        "storeId": "StoreMenu"
+    },
+    "designerId": "73a1da01-4049-4cdd-82f0-e82c232f2629",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Ajax",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "menu.js"
+            },
+            "designerId": "37c6a4de-e2f4-4501-85cb-48d8dc1e840a",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "designerId": "d70c4ffb-9ec4-48b7-aaa0-c893addea40c"
+                }
+            ]
+        }
+    ]
+}

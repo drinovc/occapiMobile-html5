@@ -1,0 +1,360 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "defaults": [
+            "{\r",
+            "    margin: \"0 10 0 10\",\r",
+            "    defaults: {\r",
+            "        labelWidth: \"75%\",\r",
+            "        labelWrap: true, \r",
+            "        clearIcon: false\r",
+            "    }\r",
+            "}"
+        ],
+        "designer|userAlias": "VSettings",
+        "designer|userClassName": "VSettings",
+        "hideAnimation": [
+            "{\r",
+            "    type: \"slideOut\",\r",
+            "    direction: \"right\"\r",
+            "}"
+        ],
+        "itemId": "VSettings",
+        "padding": null,
+        "scrollable": "vertical",
+        "showAnimation": [
+            "{\r",
+            "    type: \"slide\",\r",
+            "    direction: \"left\"\r",
+            "}"
+        ],
+        "zIndex": null
+    },
+    "configAlternates": {
+        "hideAnimation": "object",
+        "showAnimation": "object"
+    },
+    "designerId": "8dcda335-1c00-475a-81d0-cd58818f4baa",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "container|align": null,
+                "container|pack": null,
+                "docked": "top",
+                "height": 46,
+                "margin": 0,
+                "padding": 0,
+                "title": "Settings"
+            },
+            "designerId": "2c0654b0-b60a-48f8-a53a-68a9c70696fc",
+            "cn": [
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "plain",
+                        "height": 46,
+                        "itemId": "btnSettingsSave",
+                        "margin": 0,
+                        "padding": "0 10",
+                        "text": "Save",
+                        "ui": "plain"
+                    },
+                    "designerId": "63760fe5-ce2e-4055-a8c4-56456732a0dc"
+                },
+                {
+                    "type": "Ext.Spacer",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "width": null
+                    },
+                    "designerId": "a9d68dfd-9b93-4bfb-9d60-0d8f567f66c2"
+                },
+                {
+                    "type": "Ext.Button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|uiInterfaceName": "plain",
+                        "height": 46,
+                        "itemId": "btnDefaults",
+                        "margin": 0,
+                        "padding": "0 10",
+                        "text": "Defaults",
+                        "ui": "plain"
+                    },
+                    "designerId": "2fc1784b-df1d-405d-90be-806f8f862fbe"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "User"
+            },
+            "designerId": "3651a1ee-b4f7-4c20-af7d-689c8b0e3393",
+            "cn": [
+                {
+                    "type": "Ext.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "checked": true,
+                        "label": "Remember me",
+                        "name": "rememberMe"
+                    },
+                    "designerId": "2ada77f1-6837-4d5d-a42a-e5f4b27c39dc"
+                },
+                {
+                    "type": "Ext.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "checked": null,
+                        "label": "Automatic login",
+                        "name": "autoLogin"
+                    },
+                    "designerId": "a45616d1-eaa6-4e36-aa66-55050fd9a313"
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "margin": null,
+                "title": "Alerts"
+            },
+            "designerId": "6d8fef08-0e34-46bc-a389-723fb850402b",
+            "cn": [
+                {
+                    "type": "Ext.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "checked": true,
+                        "label": "Auto refresh alerts",
+                        "labelWidth": null,
+                        "name": "alertsRefreshEnabled"
+                    },
+                    "designerId": "9526d4ea-ff14-40ff-b8a0-18827c9d6794"
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "hbox"
+                    },
+                    "designerId": "5dd98629-bfb3-44c5-a4f9-8ecb225270fc",
+                    "cn": [
+                        {
+                            "type": "Ext.Component",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "slider-value"
+                                ],
+                                "html": "5s",
+                                "width": 60
+                            },
+                            "designerId": "109647e3-33f9-445a-86e9-58faed3128cd"
+                        },
+                        {
+                            "type": "Ext.field.Slider",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "mysliderfield5",
+                                "label": null,
+                                "layout|flex": 1,
+                                "maxValue": 30,
+                                "name": "alertsRefreshTimeout",
+                                "padding": 6,
+                                "value": [
+                                    5
+                                ]
+                            },
+                            "designerId": "015cd62e-a1da-48d9-8e7c-fb29d4c7a187"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "margin": null,
+                "title": "Charts"
+            },
+            "designerId": "9d11847d-0034-4e12-b40f-c74e6d825aad",
+            "cn": [
+                {
+                    "type": "Ext.field.Checkbox",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "checked": true,
+                        "label": "Auto refresh charts",
+                        "labelWidth": null,
+                        "name": "chartRefreshEnabled"
+                    },
+                    "designerId": "3378682d-8599-4297-8afb-a64d9a649d96"
+                },
+                {
+                    "type": "Ext.Container",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "hbox"
+                    },
+                    "designerId": "45181f9d-1fb8-41ef-b88d-6b8f019e88d7",
+                    "cn": [
+                        {
+                            "type": "Ext.Component",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "cls": [
+                                    "slider-value"
+                                ],
+                                "height": null,
+                                "html": "10s",
+                                "width": 60
+                            },
+                            "designerId": "3f32a7e9-8b1c-49f4-8b8c-02353f8ac849"
+                        },
+                        {
+                            "type": "Ext.field.Slider",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "mysliderfield6",
+                                "label": null,
+                                "layout|flex": 1,
+                                "maxValue": 30,
+                                "name": "chartRefreshTimeout",
+                                "padding": 6,
+                                "value": [
+                                    10
+                                ]
+                            },
+                            "designerId": "0301799e-7d9e-41a5-a83b-f0297d2eed6c"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "API"
+            },
+            "designerId": "048f136f-858b-48f4-b9af-ea0eea740848",
+            "cn": [
+                {
+                    "type": "Ext.field.Url",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "label": "URL",
+                        "labelWidth": 50,
+                        "name": "apiUrl",
+                        "placeHolder": "http://example.com",
+                        "value": [
+                            "\"http://212.235.191.163:8080/inteliui/resources/\""
+                        ]
+                    },
+                    "designerId": "a398d7e2-1cd8-4e36-adbb-57f4adb0e3fb"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "height": 10
+            },
+            "designerId": "b5470c7e-592d-4a40-bc9e-a9a78b57428e"
+        }
+    ]
+}

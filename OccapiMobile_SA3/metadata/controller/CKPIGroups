@@ -1,0 +1,76 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "CKPIGroups"
+    },
+    "designerId": "db748520-8bd0-4797-bc39-4ff56d0f7b52",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#VKPIGroups",
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onVKPIGroupsItemTap",
+                "implHandler": [
+                    "App.mask(\"Loading KPI...\");\r",
+                    "App.recKPIGroup = record;\r",
+                    "App.sel.groupName = record.get(\"kpiGroupName\");\r",
+                    "App.storeKPIs.removeAll();\r",
+                    "App.storeKPIs.load({\r",
+                    "    params: {\r",
+                    "        groupName: App.sel.groupName,\r",
+                    "        token: App.user.token\r",
+                    "    },\r",
+                    "    callback: function(records, operation, success) {\r",
+                    "        if(success) {\r",
+                    "            var view = App.VNav.push({\r",
+                    "                xtype: \"VKPIs\",\r",
+                    "                title: \"KPIs\"\r",
+                    "            });\r",
+                    "            view.down(\"titlebar\").setTitle(record.get(\"kpiGroupCaption\"));\r",
+                    "        }\r",
+                    "        App.unmask();\r",
+                    "    }\r",
+                    "});"
+                ],
+                "name": "itemtap"
+            },
+            "designerId": "31e05bad-3a4d-4052-b052-b2f887d2fee0"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#VKPIGroups",
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onVKPIGroupsInitialize",
+                "implHandler": [
+                    "component.element.on(\"swipe\", function(e,t) {\r",
+                    "    if(e.direction == \"right\" && e.startX <= 30) {\r",
+                    "        App.VMenu.show();\r",
+                    "    }\r",
+                    "    else if(e.direction == \"left\" && e.startX >= App.VMenu.getWidth()) {\r",
+                    "\r",
+                    "    }\r",
+                    "}, this);"
+                ],
+                "name": "initialize"
+            },
+            "designerId": "b4af9ba7-e799-4677-9eae-c74b9b49ba8b"
+        }
+    ]
+}

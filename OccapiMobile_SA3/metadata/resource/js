@@ -1,0 +1,13 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "js",
+        "url": "overrides.js"
+    },
+    "designerId": "40a1a3fa-54f8-41c0-8af8-07d310c21b59"
+}

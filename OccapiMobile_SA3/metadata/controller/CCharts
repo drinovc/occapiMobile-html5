@@ -1,0 +1,165 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "CCharts"
+    },
+    "designerId": "284b4ef0-5722-4779-89fd-62f45ddd2ecf",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "start",
+                "implHandler": [
+                    "App.deferIds.charts = -1;\r",
+                    "this.load(true);"
+                ]
+            },
+            "designerId": "0dd20d86-0ffb-44f0-a2f6-ef6a804f38e8"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "firstTime"
+                ],
+                "fn": "load",
+                "implHandler": [
+                    "Ext.Ajax.request({\r",
+                    "    method: \"GET\",\r",
+                    "    params: {\r",
+                    "        action: \"chart\",\r",
+                    "        kpi: App.sel.kpiName,\r",
+                    "        monitor: App.sel.monitor,\r",
+                    "        token: App.user.token\r",
+                    "    },\r",
+                    "    url: App.s.allowCrossOrigin ? \"chart/kpi/{kpi}/monitor/{monitor}/token/{token}\" : App.c.apiBaseURL,\r",
+                    "    scope: this,\r",
+                    "    useDefaultXhrHeader: false,\r",
+                    "    success: function(response, opts) {\r",
+                    "        var rObj = Ext.decode(response.responseText);\r",
+                    "\r",
+                    "        if(rObj && rObj.flotDTO && rObj.flotDTO.seriesSet) {\r",
+                    "            var seriesSet = rObj.flotDTO.seriesSet;\r",
+                    "\r",
+                    "            App.sel.chartData = rObj;\r",
+                    "            App.sel.chartLegend = {};\r",
+                    "\r",
+                    "            if(seriesSet.length > 0) {\r",
+                    "\r",
+                    "                var seriesData = {};\r",
+                    "                var seriesDataArray = [];\r",
+                    "\r",
+                    "                Ext.Array.each(seriesSet, function(s, sIdx, alls) {\r",
+                    "\r",
+                    "                    App.sel.chartLegend[\"y\" + (sIdx + 1)] = s.label;\r",
+                    "\r",
+                    "                    Ext.Array.each(s.data, function(data, dataIdx, allData) {\r",
+                    "                        var point = seriesData[data[0]];\r",
+                    "                        if(!point) {\r",
+                    "                            point = {};\r",
+                    "                        }\r",
+                    "                        point.x = data[0];\r",
+                    "                        point[\"y\" + (sIdx + 1)] = data[1];\r",
+                    "                        seriesData[data[0]] = point;\r",
+                    "                    });\r",
+                    "                });\r",
+                    "\r",
+                    "                Ext.Object.each(seriesData, function(key, obj) {\r",
+                    "                    seriesDataArray.push(obj);\r",
+                    "                });\r",
+                    "\r",
+                    "                App.storeCharts.setData(seriesDataArray);\r",
+                    "\r",
+                    "                if(firstTime) {\r",
+                    "                    App.VLineChart = App.VNav.push({\r",
+                    "                        xtype: \"VLineChart\",\r",
+                    "                        title: App.recKPI.get(\"kpiCaption\")\r",
+                    "                    });\r",
+                    "                    App.VLineChart.down(\"titlebar\").setTitle(App.recKPI.get(\"kpiCaption\"));\r",
+                    "\r",
+                    "                    Ext.Array.each(App.VLineChart.down(\"chart\").getSeries(), function(chartS, chartSIdx, allChartS) {\r",
+                    "                        var visible = typeof seriesSet[chartSIdx] != \"undefined\";\r",
+                    "\r",
+                    "                        chartS.setShowInLegend(visible);\r",
+                    "                        chartS.setHidden(!visible);\r",
+                    "                    });\r",
+                    "                    App.VLineChart.down(\"chart\").refreshLegendStore();\r",
+                    "                }\r",
+                    "            }\r",
+                    "            else {\r",
+                    "                console.log(\"No data to plot: \" + response.status);\r",
+                    "            }\r",
+                    "        }\r",
+                    "\r",
+                    "        App.unmask();\r",
+                    "\r",
+                    "        if(App.deferIds.charts && settings.get(settings.names.chartRefreshEnabled)) {\r",
+                    "            App.deferIds.charts = Ext.defer(function() {\r",
+                    "                this.load(false);\r",
+                    "            }, settings.get(settings.names.chartRefreshTimeout) * 1000, this, []);\r",
+                    "        }\r",
+                    "    }/*,\r",
+                    "    failure: function(response, opts) {\r",
+                    "        console.log(\"Server failure with status code: \" + response.status);\r",
+                    "        this.refresh();\r",
+                    "    }*/\r",
+                    "});"
+                ]
+            },
+            "designerId": "26fc5c8c-a12a-45c9-b20f-60559185b265"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "stop",
+                "implHandler": [
+                    "clearTimeout(App.deferIds.charts);\r",
+                    "App.deferIds.charts = null;\r",
+                    "\r",
+                    "App.sel.kpiName = null;\r",
+                    "App.set.monitor = null;"
+                ]
+            },
+            "designerId": "afe36323-3d32-400d-8ad0-2e319ac124a9"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#btnLineChartBack",
+                "designer|targetType": "Ext.Button",
+                "fn": "onBtnLineChartBackTap",
+                "implHandler": [
+                    "App.VNav.pop();\r",
+                    "App.CCharts.stop();"
+                ],
+                "name": "tap"
+            },
+            "designerId": "bb2d82cb-b468-429f-b4f1-10b4d82b69f2"
+        }
+    ]
+}

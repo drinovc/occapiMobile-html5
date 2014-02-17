@@ -1,0 +1,112 @@
+{
+    "type": "Ext.chart.CartesianChart",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "colors": [
+            "[\"#115fa6\", \"#94ae0a\", \"#a61120\", \"#ff8809\", \"#ffd13e\", \"#a61187\", \"#24ad9a\", \"#7c7474\", \"#a66111\"]"
+        ],
+        "designer|userClassName": "MyLineChart1"
+    },
+    "designerId": "592fb7eb-9ceb-46e0-b590-cab65fe586b5",
+    "isBuiltIn": true,
+    "iconCls": "icon-line-chart",
+    "autoName": "MyLineChart",
+    "cn": [
+        {
+            "type": "Ext.chart.axis.Category",
+            "reference": {
+                "name": "axes",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fields": [
+                    "x"
+                ],
+                "title": null
+            },
+            "designerId": "6ae16649-0d3b-48a2-a0c8-0b1b19d8a9c2"
+        },
+        {
+            "type": "Ext.chart.axis.Numeric",
+            "reference": {
+                "name": "axes",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fields": [
+                    "y1",
+                    "y2"
+                ],
+                "grid": [
+                    "{",
+                    "    odd: {",
+                    "        fill: '#e8e8e8'",
+                    "    }",
+                    "}"
+                ],
+                "position": "left",
+                "title": null
+            },
+            "designerId": "13910a21-8d4d-48ea-a0e2-34e4cef7162f"
+        },
+        {
+            "type": "Ext.chart.series.Line",
+            "reference": {
+                "name": "series",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "colors": [
+                    "rgba(0,200,0,0.3)"
+                ],
+                "style": [
+                    "{",
+                    "    smooth: true,",
+                    "    stroke: 'rgb(0,200,0)',",
+                    "}"
+                ],
+                "xField": "x",
+                "yField": "y1"
+            },
+            "designerId": "f22f160c-2772-45e2-8b4d-384c7ad8cd93"
+        },
+        {
+            "type": "Ext.chart.series.Line",
+            "reference": {
+                "name": "series",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "colors": [
+                    "transparent"
+                ],
+                "style": [
+                    "{",
+                    "    stroke: 'rgb(0,0,200)',",
+                    "    lineWidth: 2",
+                    "}"
+                ],
+                "xField": "x",
+                "yField": "y2"
+            },
+            "designerId": "266b2199-56d5-4b4d-a7fb-fd0ad66a03be"
+        },
+        {
+            "type": "Ext.chart.interactions.PanZoom",
+            "reference": {
+                "name": "interactions",
+                "type": "array"
+            },
+            "codeClass": null,
+            "designerId": "7af71f8a-b408-4008-9f95-0cefd15b0d06"
+        }
+    ]
+}

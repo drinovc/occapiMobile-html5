@@ -1,0 +1,162 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "CSettings"
+    },
+    "designerId": "1c0be30b-1c66-4cb1-9673-c596ef02246d",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "sliderfield"
+                ],
+                "fn": "sliderfieldValueChange",
+                "implHandler": [
+                    "sliderfield.up().down(\"component\").setHtml(sliderfield.getValue()[0] + \"s\");"
+                ]
+            },
+            "designerId": "c3b72f41-9560-4b46-95f0-c9a4a42298d2"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#btnSettingsSave",
+                "designer|targetType": "Ext.Button",
+                "fn": "onBtnSettingsSaveTap",
+                "implHandler": [
+                    "settings.save();\r",
+                    "\r",
+                    "if(settings.get(settings.names.rememberMe)) {\r",
+                    "    setCookie(\"user\", App.user.user);\r",
+                    "    if(settings.get(settings.names.autoLogin)) {\r",
+                    "        setCookie(\"pass\", App.user.pass);\r",
+                    "    }\r",
+                    "}\r",
+                    "\r",
+                    "//App.VNav.show();\r",
+                    "App.VMenu.setHidden(true);\r",
+                    "settings.view.hide();\r",
+                    "App.VNav.show();"
+                ],
+                "name": "tap"
+            },
+            "designerId": "a66306c0-2ab4-417f-939e-6c55de25734f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "sliderfield#mysliderfield5",
+                "designer|targetType": "Ext.field.Slider",
+                "fn": "onMysliderfield5Change",
+                "implHandler": [
+                    "App.CSettings.sliderfieldValueChange(me);"
+                ],
+                "name": "change"
+            },
+            "designerId": "431cf8a3-40bc-48a5-9aea-006e7eef0f68"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "sliderfield#mysliderfield5",
+                "designer|targetType": "Ext.field.Slider",
+                "fn": "onMysliderfield5Drag",
+                "implHandler": [
+                    "App.CSettings.sliderfieldValueChange(sliderfield);"
+                ],
+                "name": "drag"
+            },
+            "designerId": "02c3ccc8-0b92-4dbe-9073-4862c5daecee"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "sliderfield#mysliderfield6",
+                "designer|targetType": "Ext.field.Slider",
+                "fn": "onMysliderfield6Change",
+                "implHandler": [
+                    "App.CSettings.sliderfieldValueChange(me);"
+                ],
+                "name": "change"
+            },
+            "designerId": "5a8e573a-7bff-4ba6-8afc-90ff4c4ef9d9"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "sliderfield#mysliderfield6",
+                "designer|targetType": "Ext.field.Slider",
+                "fn": "onMysliderfield6Drag",
+                "implHandler": [
+                    "App.CSettings.sliderfieldValueChange(sliderfield);"
+                ],
+                "name": "drag"
+            },
+            "designerId": "1fb88d7d-fb5f-4831-be23-4f39e66d8cc1"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#btnDefaults",
+                "designer|targetType": "Ext.Button",
+                "fn": "onBtnDefaultsTap",
+                "implHandler": [
+                    "Ext.Msg.confirm(\"Restore default settings\", \"Are you sure? <br />This requires applicaton restart.\", function(btn) {\r",
+                    "    if(btn == \"yes\") {\r",
+                    "        settings.defaults();\r",
+                    "        setCookie(\"user\", \"\");\r",
+                    "        setCookie(\"pass\", \"\");\r",
+                    "        App.VMenu.setHidden(true);\r",
+                    "        settings.view.hide();\r",
+                    "        App.VNav.show();\r",
+                    "        location.reload();\r",
+                    "    }\r",
+                    "}, this);"
+                ],
+                "name": "tap"
+            },
+            "designerId": "6050b6a4-2583-4bb2-b45c-06c29338a126"
+        }
+    ]
+}

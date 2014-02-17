@@ -1,0 +1,150 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "CAlerts"
+    },
+    "designerId": "bc43a22d-d317-47e0-ae5f-827c898c6c3f",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "start",
+                "implHandler": [
+                    "App.deferIds.alerts = -1;\r",
+                    "this.load(true);"
+                ]
+            },
+            "designerId": "12cf0a97-951a-4830-8522-1823fb89cfb4"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "firstTime"
+                ],
+                "fn": "load",
+                "implHandler": [
+                    "App.storeAlerts.load({\r",
+                    "    params: {\r",
+                    "        token: App.user.token\r",
+                    "    },\r",
+                    "    scope: this,\r",
+                    "    callback: function(records, operation, success) {\r",
+                    "        if(success) {            \r",
+                    "            if(firstTime) {\r",
+                    "                App.storeAlerts.suspendEvents();\r",
+                    "                App.storeAlerts.clearFilter(true);\r",
+                    "                App.storeAlerts.filter(\"kpiName\", App.sel.kpiName);\r",
+                    "                App.storeAlerts.resumeEvents(true);\r",
+                    "                \r",
+                    "                if(App.storeAlerts.getCount() > 0) {\r",
+                    "                    App.VAlerts = App.VNav.push({\r",
+                    "                        xtype: \"VAlerts\",\r",
+                    "                        title: App.recKPI.get(\"kpiCaption\")\r",
+                    "                    });\r",
+                    "                    App.VAlerts.down(\"titlebar\").setTitle(App.recKPI.get(\"kpiCaption\"));\r",
+                    "                    App.VAlerts.setLoadingText(null);\r",
+                    "                }\r",
+                    "                else {\r",
+                    "                    Ext.Msg.alert(null, \"No alerts for \" + App.recKPI.get(\"kpiCaption\"));\r",
+                    "                }\r",
+                    "\r",
+                    "                App.unmask();\r",
+                    "            }\r",
+                    "        }\r",
+                    "        if(App.deferIds.alerts && settings.get(settings.names.alertsRefreshEnabled)) {\r",
+                    "            App.deferIds.alerts = Ext.defer(function() {\r",
+                    "                this.load(false);\r",
+                    "            }, settings.get(settings.names.alertsRefreshTimeout) * 1000, this, []);\r",
+                    "        }\r",
+                    "    }\r",
+                    "});"
+                ]
+            },
+            "designerId": "bcfe935a-8b3a-4255-9ea0-c444a6c71640"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "stop",
+                "implHandler": [
+                    "clearTimeout(App.deferIds.alerts);\r",
+                    "App.deferIds.alerts = null;\r",
+                    "\r",
+                    "App.sel.kpiName = null;"
+                ]
+            },
+            "designerId": "848db425-e7d4-4502-b55e-8ec14bfea3c5"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "button#btnAlertsBack",
+                "designer|targetType": "Ext.Button",
+                "fn": "onBtnAlertsBackTap",
+                "implHandler": [
+                    "App.VNav.pop();\r",
+                    "App.CAlerts.stop();"
+                ],
+                "name": "tap"
+            },
+            "designerId": "aa8fcad2-c74d-4fe1-b2be-8a34fe11422a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "list#VAlerts",
+                "designer|targetType": "Ext.dataview.List",
+                "fn": "onVAlertsItemTap",
+                "implHandler": [
+                    "App.VAlertDetails = App.VNav.push({\r",
+                    "    xtype: \"VAlertDetails\"\r",
+                    "});\r",
+                    "App.VAlertDetails.down(\"toolbar\").setTitle(\"Alert details\");\r",
+                    "\r",
+                    "var map = App.VAlertDetails.down(\"map\");\r",
+                    "map._pos = new google.maps.LatLng(46.151241, 14.995463);\r",
+                    "map._markerTitle = \"Map marker test\";\r",
+                    "\r",
+                    "/*\r",
+                    "if(!record.get(\"longitude\") || !record.get(\"latitude\")) {\r",
+                    "    Ext.Msg.alert(null, \"Alert has no location\");\r",
+                    "}\r",
+                    "*/"
+                ],
+                "name": "itemtap"
+            },
+            "designerId": "17aa2386-6a2f-4bf9-a78e-61bb6d11e962"
+        }
+    ]
+}
